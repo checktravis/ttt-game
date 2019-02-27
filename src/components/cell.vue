@@ -5,9 +5,7 @@
 <script>
 export default {
   name: 'Cell',
-  props: {
-    msg: String
-  },
+	props: ['name'],
   data () {
     return {
       // enables the player to place a mark
@@ -23,7 +21,6 @@ export default {
         // gets either X or O from the Grid component
         this.mark = this.$parent.activePlayer
         this.frozen = true
-        
         // fires an event to notify the Grid component that a mark is placed
         Event.$emit('strike', this.name)
       }
