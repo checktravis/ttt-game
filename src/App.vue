@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="details">
+      <h1>Tic Tac Toe</h1>
+    </div>
+    <grid></grid>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Grid from './components/grid.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Grid
   }
 }
 </script>
