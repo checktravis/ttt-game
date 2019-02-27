@@ -39,6 +39,9 @@ export default {
       Event.$emit('gridReset')
       this.matches++
     }
+  },
+  created () {
+    Event.$on('win', winner => this.wins[winner]++)
   }
 }
 </script>
