@@ -11,6 +11,7 @@
         <h2>Match #{{ matches + 1 }}</h2>
       </div>
       <grid></grid>
+      <button class="restart" @click="restart">Restart</button>
     </div>
   </div>
 </template>
@@ -30,6 +31,13 @@ export default {
         O: 0,
         X: 0
       }
+    }
+  },
+  methods: {
+    restart () {
+      Event.$emit('clearCell')
+      Event.$emit('gridReset')
+      this.matches++
     }
   }
 }
